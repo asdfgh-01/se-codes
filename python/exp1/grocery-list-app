@@ -1,0 +1,35 @@
+#print date and time
+import datetime
+time = datetime.datetime.now()
+month = str(time.month)
+day = str(time.day)
+hour = str(time.hour)
+minute = str(time.minute)
+print("Welcome to the Grocery List App.")
+print("Current Date and Time :"+month+"/"+day+" "+hour+":"+minute)
+
+#get user-input for grocery list
+glist = ["Meat", "Cheese"]
+print("You currently have Meat and Cheese in your list.")
+for x in range(3):
+    item = input("Type of food to add to the grocery list :").title()
+    glist.append(item)
+
+print(f"Here is your Grocery List :\n{glist}")
+glist.sort()
+print(f"Here is your grocery list sorted :\n{glist}")
+print("\nSimulating Grocery Shopping...")
+
+#begin shopping
+for y in range(3):
+    print(f"Current Grocery List : {len(glist)} items\n{glist}")
+    purchased = input("What food did you buy :").title()
+    print(f"Removing {purchased} from list...")
+    glist.remove(purchased)
+
+print(f"Current Grocery List : {len(glist)} items\n{glist}")
+print(f"Sorry, the store is out of {glist[-1]}")
+glist.pop()
+item_last = input("What food would you like instead :").title()
+glist.insert(0, item_last)
+print(f"Here is what remains on your grocery list :\n{glist}")
