@@ -1,0 +1,24 @@
+print("Welcome to the Grade Sorter App")
+grades = []
+
+#inputing grades
+g1 = int(input("What is your first grade (0-100): "))
+grades.append(g1)
+g2 = int(input("What is your second grade (0-100): "))
+grades.append(g2)
+g3 = int(input("What is your third grade (0-100): "))
+grades.append(g3)
+g4 = int(input("What is your fourth grade (0-100): "))
+grades.append(g4)
+print("Your grades are :", grades)
+
+#sorting list
+grades.sort(reverse = True)
+print("Your grades from highest to lowest are: ", grades)
+
+#dropping lowest grades
+print("The lowest two grades will now be dropped.")
+print("Removed grade : ", grades.pop())
+print("Removed grade : ", grades.pop())
+print("Your remaining grades are :", grades)
+print("Nice work! Your highest grade is a ", grades[0])
