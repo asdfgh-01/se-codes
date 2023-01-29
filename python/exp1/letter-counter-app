@@ -1,0 +1,14 @@
+print("Welcome to the Letter Counter App")
+name = input("What is your name: ")
+
+#strip() to remove unnecessary space
+n_name = name.strip().lower().title()
+print("Hello " + n_name + "!")
+
+#split() to access first name
+first_name = n_name.split()[0]
+print("I will count the number of times that a specific letter occurs in a message.")
+message = input("Please enter a message: ")
+letter = input("Which letter would you like to count the occurrences of: ")
+number = message.lower().count(letter)
+print(first_name + f", your message has {number} {letter}'s in it.")
